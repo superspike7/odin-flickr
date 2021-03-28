@@ -1,0 +1,4 @@
+<%= form_tag(home_path, :method => 'get') do %>
+  <%= search_field_tag :user_id, params[:user_id], placeholder: "enter user id" %>
+  <%= button_tag "search", :name => nil %>
+<% end %>

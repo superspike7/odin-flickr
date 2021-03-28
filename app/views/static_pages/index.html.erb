@@ -1,1 +1,16 @@
-<h1>hello world</h1>
+<h1>Flickr API</h1>
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
+<%= render 'form' %>
+
+<h2>Photos (<%= @photos.count if @photos%>):</h2>
+<% if @photos %>
+<div>
+<% @photos.each do |photo| %>
+<div><img src="<%= Flickr.url_b photo %>" alt=""></div>
+<% end %>
+</div>
+<% end %>
